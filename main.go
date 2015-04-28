@@ -75,6 +75,7 @@ func TagImage(pullspec *ImageSpecifier, newspec *ImageSpecifier) error {
 	cmd := exec.Command(
 		"docker",
 		"tag",
+		"-f",
 		pullspec.String(),
 		newspec.String(),
 	)
